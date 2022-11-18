@@ -1,0 +1,32 @@
+{% extends 'blogs/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    {% for post in posts %}
+        <main role="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div>
+                            <img src="https://via.placeholder.com/ 1280x720" class="rounded" alt="{{post.title}}">
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-mb-6">
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.title }}
+                        </a>
+                        <div  class="card-header" >
+                            <small>
+                                Published {{ post.publish.date }} by <strong>{{ post.author }}</strong>
+                            </small>
+                        </div>
+                        <p  class="card-header card-text mb-auto py-2">{{ post.body|safe|striptags|truncatechars:100 }}</p>
+                        <div class="card-header mb-5">
+                            <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    {% endfor %}
+
+{% endblock content %}
