@@ -1,7 +1,5 @@
 {% extends 'blogs/base.html' %}
 {% load bootstrap4 %}
-
-
 {% block title %} - {{post.title}}{% endblock title %}
 
 {% block content %}
@@ -11,7 +9,8 @@
                 <div>
                     <div>
                         <figure>
-                            <img src="https://via.placeholder.com/500x500" class="rounded" alt="{{post.title}}">
+                           <!-- featured image -->
+                            <img src="{{ post.image.url }}" class="rounded" alt="{{post.title}}">
                         </figure>
                     </div>
                     <div >
