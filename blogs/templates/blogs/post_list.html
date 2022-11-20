@@ -8,7 +8,8 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div>
-                            <img src="{{ post.image.url }}" class="rounded featured-image-list" alt="{{post.title}}">
+                            <!-- featured image -->
+                           {% load static %} <img src="{{  post.image.url }}" class="rounded images featured-image-list" alt="{{post.title}}">
                         </div>
                     </div>
                     <div class="col-md-5 col-mb-6">
