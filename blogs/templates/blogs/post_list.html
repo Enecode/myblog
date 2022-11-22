@@ -1,7 +1,17 @@
 {% extends 'blogs/base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-    <link rel="stylesheet" href="./static/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./static/home.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./static/jacob.jpg" width="50px" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
     {% for post in posts %}
         <main role="main">
             <div class="container">
@@ -30,5 +40,6 @@
             </div>
         </main>
     {% endfor %}
-
+</body>
+</html>
 {% endblock content %}
