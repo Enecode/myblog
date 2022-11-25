@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('project/', views.projects, name="project"),
     path('post_list/', views.post_list, name="post_list"),
+    path('form/', views.forms, name='form'),
     path('<slug:post>/', views.post_detail, name="post_detail"),
 
 ]
