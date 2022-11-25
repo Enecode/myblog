@@ -42,3 +42,15 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.slug])
+
+
+class Form(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    services = models.CharField(max_length=300)
+    text = models.TextField()
+    phone = models.IntegerField()
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.text
