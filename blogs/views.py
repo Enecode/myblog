@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
+from .models import Post, Form
 
 
 def index(request):
@@ -7,13 +7,13 @@ def index(request):
 
 
 def post_list(request):
-    posts = Post.published.all()
+    posts = Post.objects.filter(status="published")
     return render(request, 'blogs/post_list.html', {'posts': posts})
 
 
 def post_detail(request, post):
     post = get_object_or_404(Post, slug=post, status='published')
-    return render(request, 'blogs/post_detail.html', {'post': post})
+    return render(request, 'blogs/post_detail.html', context={'post': post})
 
 
 def contact(request):
@@ -22,3 +22,8 @@ def contact(request):
 
 def projects(request):
     return render(request, 'blogs/project.html')
+
+
+def forms(request):
+    form = Form.objects.filter(services='services')
+    return render(request, 'blogs/form.html', context={"form": form})
