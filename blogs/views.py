@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Form
+from .models import Post
+from .forms import Form
 
 
 def index(request):
@@ -25,5 +26,5 @@ def projects(request):
 
 
 def forms(request):
-    form = Form.objects.filter(services='services')
-    return render(request, 'blogs/form.html', context={"form": form})
+    context = {'form': Form()}
+    return render(request, 'blogs/form.html', context)
