@@ -1,6 +1,7 @@
 {% extends "blogs/base.html" %}
 {% load bootstrap4 %}
 {% block content %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,12 +9,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,
         shrink-to-fit=no">
     <link rel="shortcut icon" href="./static/jacob.jpg" width="50px" type="image/x-icon">
+
     <title>Isah Jacob</title>
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
 </head>
 <body>
+     <main role="main">
+            <div class="container bg-light mb-4">
+                <div class="container">
+                    <div class="form-group col-md-12">
+                        <form method="post">
+                            <div class="form-group bg-light mb-4">
+                                <label  for="{{ first_name }}">First Name</label><input class="form-control" id="{{ first_name }}" type="text" placeholder="First name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ last_name }}">Last Name</label><input class="form-control" id="{{ last_name }}" type="text" placeholder="Last name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="{{ services }}">Service</label>
+                                <select id="{{ services }}" name="services">
+                                    <option value="Web development">Web development</option>
+                                    <option value="App development">App Development</option>
+                                    <option value="Web hosting">Web Hosting</option>
+                                    <option value="Digital Marketing">Digital Marketing</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control">{{ text }}</textarea>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="{{ phone }}">Phone number</label><input class="form-control" id="{{ phone }}" type="tel" placeholder="phone number" />
+                            </div>
+
+                            <div class="form-group">
+                                 <label for="{{ email }}">Email</label><input class="form-control" id="{{ email }}" type="email" placeholder="email address" />
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+     </main>
 </body>
 </html>
+
 {% endblock content %}
