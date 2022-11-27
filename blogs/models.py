@@ -5,7 +5,6 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
-from django import forms
 
 
 class PublishedManager(models.Manager):
@@ -25,7 +24,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     body = models.TextField()
 
-    image = models.ImageField(upload_to='featured_image/%Y/%m/%d/')
+    image = models.ImageField(upload_to='blogs/static/featured_image/%Y/%m/%d/')
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
