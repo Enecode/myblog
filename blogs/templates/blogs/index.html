@@ -32,42 +32,42 @@
              <!---Projects-->
             <div class="text-center text-info">
                 <h1><u>Projects</u></h1>
-            </div>
+            </div><br>
             <div class="row">
-                <legend>
-                    <div class="col">
-                        <h4>Landing Page</h4>
-                        <p>Landing page designed with just HTML and CSS. To take emails</p>
-                        <a href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
-                    </div><br>
-                    <div class="col">
-                        <h4>Technical Writing</h4>
-                        <p>Technical Writing about JavaScript. Designed with HTML and CSS</p>
-                        <a href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
-                    </div><br>
-                    <div class="col">
-                        <h4>Note App</h4>
-                        <p>A note app designed with Angular js. To take notes and save. </p>
-                        <a href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
-                    </div><br>
-                    <div class="col">
-                        <h4>Portfolio</h4>
-                        <p>My Portfolio showing my projects. Designed with HTML and CSS. </p>
-                        <a href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
-                    </div><br>
-                    <div class="col">
-                        <h4>Web Form</h4>
-                        <p>A web form designed with HTML and CSS to take emails </p>
-                        <button class="btn btn-info"><a href="codepen.io/enecode"></a>Take a look</button>
-                    </div><br>
-                    <div class="col">
-                        <h4>App Calculator</h4>
-                        <p>A calculator designed with JavaScript, HTML and CSS</p>
-                        <button class="btn btn-info"><a href="codepen.io/enecode"></a>Take a look</button>
-                    </div>
-                </legend>
-            </div><br><hr>
-            <div >
+                <div class="col-md-4">
+                    <h4>Landing Page</h4>
+                    <p>Landing page designed with just HTML and CSS. To take emails</p>
+                    <a  href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Technical Writing</h4>
+                    <p>JavaScript Technical Writing designed with HTML and CSS</p>
+                    <a href="https://enecode.github.io/javascript-technical-writing" class="btn btn-info">Take a look</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Blackjack Game</h4>
+                    <p>The game of blackjack build with python</p>
+                    <a href="https://github.com/Enecode/Black-Jack-Game-Build-With-Python" class="btn btn-info">Take a look</a>
+                </div>
+            </div><br>
+            <div class="row"><br>
+                 <div class="col-md-4">
+                    <h4>Portfolio</h4>
+                    <p>My Portfolio showing my projects. Designed with HTML and CSS. </p>
+                    <a href="https://codepen.io/enecode" class="btn btn-info">Take a look</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Web Form</h4>
+                    <p>A web form designed with HTML and CSS to take emails </p>
+                    <button class="btn btn-info"><a href="codepen.io/enecode"></a>Take a look</button>
+                </div><br>
+                <div class="col-md-4">
+                    <h4>App Calculator</h4>
+                    <p>A calculator designed with JavaScript, HTML and CSS</p>
+                    <button class="btn btn-info"><a href="codepen.io/enecode"></a>Take a look</button>
+                </div>
+            </div><br>
+            <div ><br>
                 <h1 class="text-center text-info"><u>Quote</u></h1>
             </div>
                  <div>
@@ -75,8 +75,8 @@
                         <p class="quote-text"><i>“Even in such technical lines as engineering, about 15% of one’s financial success is due one’s technical knowledge and about 85% is due to skill in human engineering, to personality and the ability to lead people.”</i> </p><br> -Dale Carnegie
                     </div>
                  </div>
-            </div>
-            <div >
+            </div><br>
+            <div ><br>
                 <h1 class="text-center text-info"><u>Contact</u></h1>
             </div>
             <div class="container">
@@ -95,24 +95,18 @@
                         <form action="#" target="_blank">
                             <div class="form-group mb-3">
                                 <label for="name">Name:</label>
-                                <label>
-                                    <input type="text" class="form-control mb-3" required name="Name">
-                                </label>
+                                <input type="text" class="form-control mb-3" placeholder="Name" required name="Name">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="email">Email:</label>
-                                <label>
-                                    <input type="text" class="form-control mb-3" required name="Email">
-                                </label>
+                                <input type="text" class="form-control mb-3" placeholder="Email" required name="Email">
                             </div>
-                            <div class="form-group mb-3">
+                           <div class="form-group mb-3">
                                 <label>Message</label>
-                                <label>
-                                    <input type="text" class="form-control mb-3" required name="Message">
-                                </label>
+                                <textarea placeholder="Message" required class="form-control">{{ text }}</textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <button class="btn btn-primary btn-out" type="submit">Send</button>
+                                <button class="btn btn-primary btn-out" required type="submit">Send</button>
                             </div>
                         </form><br>
                     </div>
