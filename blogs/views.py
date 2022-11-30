@@ -1,3 +1,4 @@
+from django.contrib.sites import requests
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from .forms import Form
