@@ -1,4 +1,4 @@
-{% extends 'blogs/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% load bootstrap4 %}
 {% block content %}
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="./static/jacob.jpg" width="50px" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/jacob.jpg" width="50px" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
 </head>
@@ -27,6 +27,7 @@
                             <a href="{{ post.get_absolute_url }}">
                                 {{ post.title }}
                             </a>
+                        </div>
                         <div  class="" >
                             <small>
                                 Published {{ post.publish.date }} by <strong>{{ post.author }}</strong>
