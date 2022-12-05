@@ -52,10 +52,10 @@
                                 <nav class="footer-nav">
                                     <ul>
                                         <li><a href="{% url 'blog:index'%}">Home</a></li>
-                                        <li><a href="blogs/post_list">Blog</a></li>
-                                        <li><a href="project.html">Projects</a></li>
-                                        <li><a href="resume/html">Resume</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+                                        <li><a href="{% url 'blog:project' %}">Projects</a></li>
+                                        <li><a href="#">Resume</a></li>
+                                        <li><a href="{% url 'blog:contact' %}">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -73,7 +73,7 @@
                             </div>
                        </div>
                        <div class="text text-danger">
-                           <p>Designed by <a href="#">Isa Jacob</a> &copy;2021</p>
+                           <p>Designed by <a href="#">Isah Jacob</a> &copy;2021</p>
                        </div>
                     </div>
                 </footer>
