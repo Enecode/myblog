@@ -14,12 +14,12 @@
 <body class="bg-light">
     {% for post in posts %}
         <main role="main">
-            <div class="container bg-light jumbotron">
+            <div class="container bg-light">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class=" p-18">
+                        <div class="card-body p-10">
                             <!-- featured image -->
-                           <img src="{%  static post.image.url %}" width="100%" class="rounded images featured-image-list" alt="{{post.title}}">
+                           <img src="{%  static post.image.url %}" width="100%" class="rounded card-body images featured-image-list" alt="{{post.title}}">
                         </div>
                     </div>
                     <div class="col-md-5">
